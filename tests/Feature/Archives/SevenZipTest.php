@@ -6,11 +6,10 @@ namespace Tests\Feature\Archives;
 
 use PhpArchiveStream\ArchiveManager;
 use PhpArchiveStream\Archives\SevenZip;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \PhpArchiveStream\Archives\SevenZip
- */
+#[CoversClass(SevenZip::class)]
 class SevenZipTest extends TestCase
 {
     protected string $outputPath = './output.7z';

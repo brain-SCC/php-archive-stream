@@ -7,12 +7,11 @@ namespace Tests\Feature\Archives;
 use PhpArchiveStream\Archives\Tar;
 use PhpArchiveStream\IO\Output\OutputStream;
 use PhpArchiveStream\Writers\Tar\TarWriter;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 
-/**
- * @covers \PhpArchiveStream\Archives\Tar
- */
+#[CoversClass(Tar::class)]
 class TarTest extends TestCase
 {
     protected string $outputPath = './output.tar';

@@ -20,7 +20,7 @@ namespace PhpArchiveStream\Writers\Zip\Records\Fields;
  * - Bit 8: Unused.
  * - Bit 9: Unused.
  * - Bit 10: Unused.
- * - Bit 11: Language encoding flag (EFS).
+ * - Bit 11: Language encoding flag (EFS). Set by default, marking file names as UTF-8.
  * - Bit 12: Reserved.
  * - Bit 13: Indicates header encryption.
  * - Bit 14: Reserved.
@@ -38,9 +38,16 @@ class GeneralPurposeBitFlag
     public const ZERO_HEADER = 0b0000000000001000;
 
     /**
-     * The value of the general purpose bit flag.
+     * Bit flag for the language encoding (EFS), marking file names as UTF-8.
      */
-    protected int $value = 0b0000000000000000;
+    public const LANGUAGE_ENCODING = 0b0000100000000000;
+
+    /**
+     * The value of the general purpose bit flag.
+     *
+     * Bit 11 (language encoding, UTF-8) is set by default.
+     */
+    protected int $value = 0b0000100000000000;
 
     /**
      * Create a new instance of the GeneralPurposeBitFlag.

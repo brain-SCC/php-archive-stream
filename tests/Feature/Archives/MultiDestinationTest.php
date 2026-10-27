@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Tests\Feature\Archives;
 
 use PhpArchiveStream\ArchiveManager;
+use PhpArchiveStream\Archives\Zip;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \PhpArchiveStream\Archives\Zip
- */
+#[CoversClass(Zip::class)]
 class MultiDestinationTest extends TestCase
 {
     protected string $outputPath1 = './output1.zip';
