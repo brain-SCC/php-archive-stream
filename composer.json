@@ -1,5 +1,5 @@
 {
-    "name": "mateuszanella/php-archive-stream",
+    "name": "brainscc/php-archive-stream",
     "description": "A modular and lightweight PHP library for creating ZIP, TAR, TAR.GZ, TAR.BZ2 and 7z archives on-the-fly with streaming support.",
     "type": "library",
     "license": "MIT",
